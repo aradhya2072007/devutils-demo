@@ -2,7 +2,11 @@
 
 An interactive, dark-themed developer playground and demonstration dashboard for the [`@aradhya2072007/devutils-npm`](https://www.npmjs.com/package/@aradhya2072007/devutils-npm) utility toolkit.
 
-Built as the second submission repository for the **Advanced Software Development (ASD)** assignment: *"Publish an NPM Package"*.
+**🌐 Live Production Application:** [https://devutils-demo-nu.vercel.app](https://devutils-demo-nu.vercel.app)  
+**📦 Published NPM Package:** [`@aradhya2072007/devutils-npm`](https://www.npmjs.com/package/@aradhya2072007/devutils-npm)  
+**📂 Package Source Repository:** [github.com/aradhya2072007/npm-package-asd-project](https://github.com/aradhya2072007/npm-package-asd-project)
+
+Built as the second submission repository for the **Advanced Software Development (ASD)** evaluation: *"Publish an NPM Package"*.
 
 ---
 
