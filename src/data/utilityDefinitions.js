@@ -3,7 +3,9 @@
  * All functions are imported DIRECTLY from the published package: @aradhya2072007/devutils-npm
  */
 
-import {
+import devutils from '@aradhya2072007/devutils-npm';
+
+const {
   // String Utilities (6)
   capitalize,
   reverseString,
@@ -41,7 +43,7 @@ import {
   formatDate,
   timeAgo,
   getDaysBetween
-} from '@aradhya2072007/devutils-npm';
+} = devutils;
 
 export const CATEGORIES = [
   { id: 'all', name: 'All Utilities', count: 31, icon: 'LayoutGrid' },
