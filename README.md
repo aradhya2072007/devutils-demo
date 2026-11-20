@@ -1,10 +1,11 @@
 # DevUtils Playground ⚡️
 
-An interactive, dark-themed developer playground and demonstration dashboard for the [`@aradhya2072007/devutils-npm`](https://www.npmjs.com/package/@aradhya2072007/devutils-npm) utility toolkit.
+> ### 🌐 **Live Demo Website**: [https://devutils-demo-nu.vercel.app](https://devutils-demo-nu.vercel.app)  
+> Interactive developer playground and demonstration dashboard executing live from the published [`@aradhya2072007/devutils-npm`](https://www.npmjs.com/package/@aradhya2072007/devutils-npm) utility toolkit.
 
-**🌐 Live Production Application:** [https://devutils-demo-nu.vercel.app](https://devutils-demo-nu.vercel.app)  
-**📦 Published NPM Package:** [`@aradhya2072007/devutils-npm`](https://www.npmjs.com/package/@aradhya2072007/devutils-npm)  
-**📂 Package Source Repository:** [github.com/aradhya2072007/npm-package-asd-project](https://github.com/aradhya2072007/npm-package-asd-project)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-devutils--demo--nu.vercel.app-6366f1?style=for-the-badge&logo=vercel)](https://devutils-demo-nu.vercel.app)
+[![NPM Package](https://img.shields.io/badge/NPM-@aradhya2072007%2Fdevutils--npm-cb3837?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@aradhya2072007/devutils-npm)
+[![GitHub Source](https://img.shields.io/badge/GitHub-npm--package--asd--project-181717?style=for-the-badge&logo=github)](https://github.com/aradhya2072007/npm-package-asd-project)
 
 Built as the second submission repository for the **Advanced Software Development (ASD)** evaluation: *"Publish an NPM Package"*.
 
@@ -25,6 +26,7 @@ Built as the second submission repository for the **Advanced Software Developmen
 
 | Property | Value |
 | :--- | :--- |
+| **Live Demo Website** | [https://devutils-demo-nu.vercel.app](https://devutils-demo-nu.vercel.app) |
 | **Package Name** | [`@aradhya2072007/devutils-npm`](https://www.npmjs.com/package/@aradhya2072007/devutils-npm) |
 | **Version** | `1.0.0` |
 | **Package Repository** | [github.com/aradhya2072007/npm-package-asd-project](https://github.com/aradhya2072007/npm-package-asd-project) |
