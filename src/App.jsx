@@ -5,7 +5,7 @@ import Hero from './components/Hero';
 import UtilityCard from './components/UtilityCard';
 import Toast from './components/Toast';
 import { UTILITIES, CATEGORIES } from './data/utilityDefinitions';
-import { Search, Sparkles, Filter, ExternalLink, Terminal } from 'lucide-react';
+import { Search, Sparkles, Filter, ExternalLink, Terminal, Anvil } from 'lucide-react';
 
 function GithubIcon({ className = 'w-4 h-4' }) {
   return (
@@ -71,7 +71,7 @@ export default function App() {
         />
 
         {/* Main Content Area */}
-        <main className="dashboard-main">
+        <main className="dashboard-main" role="main">
           {/* Hero Banner Section */}
           <Hero
             onSelectCategory={setActiveCategory}
@@ -98,6 +98,8 @@ export default function App() {
                   <button
                     onClick={() => setSearchQuery('')}
                     className="tag-clear-btn"
+                    title="Clear filter"
+                    aria-label="Clear filter"
                   >
                     ×
                   </button>
@@ -124,7 +126,7 @@ export default function App() {
               </div>
               <h3 className="empty-state-title">No utilities matched your search</h3>
               <p className="empty-state-desc">
-                No functions matched the term <strong>"{searchQuery}"</strong> in the {activeCategory} category.
+                No functions matched the term <strong>"{searchQuery}"</strong> in UtilityForge.
               </p>
               <button
                 onClick={() => {
@@ -139,12 +141,14 @@ export default function App() {
           )}
 
           {/* Footer */}
-          <footer className="dashboard-footer">
+          <footer className="dashboard-footer" role="contentinfo">
             <div className="footer-content">
               <div className="footer-left">
-                <span className="footer-brand">DevUtils Playground</span>
+                <span className="footer-brand">UtilityForge</span>
                 <span className="footer-separator">•</span>
-                <span>Advanced Software Development Evaluation Project</span>
+                <span>Forge better JavaScript workflows</span>
+                <span className="footer-separator">•</span>
+                <span>Powered by DevUtils</span>
                 <span className="footer-separator">•</span>
                 <span>Created by Aradhya Tiwari</span>
               </div>
@@ -155,6 +159,7 @@ export default function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="footer-link"
+                  aria-label="View DevUtils package on NPM"
                 >
                   <Terminal className="w-4 h-4" />
                   <span>NPM Registry</span>
@@ -164,6 +169,7 @@ export default function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="footer-link"
+                  aria-label="View UtilityForge demo repository on GitHub"
                 >
                   <GithubIcon className="w-4 h-4" />
                   <span>Demo Repository</span>
@@ -173,6 +179,7 @@ export default function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="footer-link"
+                  aria-label="View DevUtils package repository on GitHub"
                 >
                   <ExternalLink className="w-4 h-4" />
                   <span>Package Repository</span>

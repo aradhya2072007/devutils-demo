@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Boxes,
+  Anvil,
   ExternalLink,
   Search,
   Sparkles,
@@ -19,29 +19,37 @@ function GithubIcon({ className = 'w-4 h-4' }) {
 
 export default function Header({ searchQuery, onSearchChange, onQuickFilter }) {
   return (
-    <header className="dashboard-header">
+    <header className="dashboard-header" role="banner">
       <div className="header-left">
-        <div className="header-logo" onClick={() => onQuickFilter('all')}>
-          <div className="logo-icon-wrapper">
-            <Boxes className="w-6 h-6 text-indigo-400" />
+        <div 
+          className="header-logo" 
+          onClick={() => onQuickFilter('all')}
+          role="button"
+          tabIndex={0}
+          aria-label="UtilityForge Home - Show all utilities"
+          onKeyDown={(e) => e.key === 'Enter' && onQuickFilter('all')}
+        >
+          <div className="logo-icon-wrapper" aria-hidden="true">
+            <Anvil className="w-5 h-5 text-indigo-400" />
           </div>
           <div className="logo-text-group">
             <div className="logo-title-row">
-              <span className="logo-title">DevUtils</span>
+              <span className="logo-title">UtilityForge</span>
               <span className="badge-pill badge-primary">v1.0.0</span>
             </div>
-            <span className="logo-subtitle">Interactive Playground</span>
+            <span className="logo-subtitle">Powered by DevUtils</span>
           </div>
         </div>
       </div>
 
       <div className="header-center">
         <div className="search-bar-wrapper">
-          <Search className="search-icon w-4 h-4 text-slate-400" />
+          <Search className="search-icon w-4 h-4 text-slate-400" aria-hidden="true" />
           <input
             type="text"
             className="search-input"
-            placeholder="Search 31 functions (e.g., slugify, chunk, email)..."
+            placeholder="Search 31 functions in UtilityForge (e.g., slugify, chunk, email)..."
+            aria-label="Search utility functions"
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
           />
@@ -50,6 +58,7 @@ export default function Header({ searchQuery, onSearchChange, onQuickFilter }) {
               onClick={() => onSearchChange('')}
               className="search-clear-btn"
               title="Clear search"
+              aria-label="Clear search query"
             >
               ×
             </button>
@@ -72,7 +81,8 @@ export default function Header({ searchQuery, onSearchChange, onQuickFilter }) {
           target="_blank"
           rel="noopener noreferrer"
           className="btn-header-link btn-npm"
-          title="View published package on NPM"
+          title="View published package @aradhya2072007/devutils-npm on NPM"
+          aria-label="View published DevUtils package on NPM"
         >
           <Terminal className="w-4 h-4" />
           <span>NPM</span>
@@ -84,7 +94,8 @@ export default function Header({ searchQuery, onSearchChange, onQuickFilter }) {
           target="_blank"
           rel="noopener noreferrer"
           className="btn-header-link btn-github"
-          title="View package source repository on GitHub"
+          title="View DevUtils package source repository on GitHub"
+          aria-label="View DevUtils source repository on GitHub"
         >
           <GithubIcon className="w-4 h-4" />
           <span>GitHub</span>

@@ -1,7 +1,12 @@
-# DevUtils Playground ⚡️
+# UtilityForge ⚡️
 
-> ### 🌐 **Live Demo Website**: [https://devutils-demo-nu.vercel.app](https://devutils-demo-nu.vercel.app)  
-> Interactive developer playground and demonstration dashboard executing live from the published [`@aradhya2072007/devutils-npm`](https://www.npmjs.com/package/@aradhya2072007/devutils-npm) utility toolkit.
+> ### **Forge better JavaScript workflows.**  
+> A modern interactive workspace for exploring and executing 31 reusable JavaScript utility functions.  
+> **Powered by the [`@aradhya2072007/devutils-npm`](https://www.npmjs.com/package/@aradhya2072007/devutils-npm) utility toolkit.**
+
+**🌐 Live Production Application:** [https://devutils-demo-nu.vercel.app](https://devutils-demo-nu.vercel.app)  
+**📦 Published NPM Package:** [`@aradhya2072007/devutils-npm`](https://www.npmjs.com/package/@aradhya2072007/devutils-npm)  
+**📂 Package Source Repository:** [github.com/aradhya2072007/npm-package-asd-project](https://github.com/aradhya2072007/npm-package-asd-project)
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-devutils--demo--nu.vercel.app-6366f1?style=for-the-badge&logo=vercel)](https://devutils-demo-nu.vercel.app)
 [![NPM Package](https://img.shields.io/badge/NPM-@aradhya2072007%2Fdevutils--npm-cb3837?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@aradhya2072007/devutils-npm)
@@ -13,12 +18,12 @@ Built as the second submission repository for the **Advanced Software Developmen
 
 ## 🌟 Highlights
 
-- **Live NPM Package Integration**: Installs and uses `@aradhya2072007/devutils-npm` directly from the public NPM registry.
-- **Zero Local Copies**: 100% of utility operations are executed by the installed package without replicating source code.
+- **Powered by DevUtils**: Runs on the live, published [`@aradhya2072007/devutils-npm`](https://www.npmjs.com/package/@aradhya2072007/devutils-npm) package from the public NPM registry.
+- **Zero Local Copies**: 100% of utility operations are executed by the installed package without duplicating source code.
 - **All 31 Functions Interactive**: Live input controls, parameter adjustments, execution timers, and formatted outputs for every utility.
-- **Modern Developer SaaS UI**: Deep dark mode theme, elegant purple/blue glowing accents, responsive layouts, and accessible controls.
+- **Modern Developer SaaS UI**: Deep charcoal dark theme, elegant purple/indigo glowing accents, responsive layouts, and accessible controls.
 - **Copy & Share Outputs**: One-click output copy with real-time feedback toast notifications.
-- **Defensive Error Display**: Gracefully renders validation errors when invalid parameters or edge cases are triggered.
+- **Defensive Error Display**: Gracefully renders validation errors when invalid parameters or edge cases are triggered without application crashes.
 
 ---
 
@@ -26,9 +31,12 @@ Built as the second submission repository for the **Advanced Software Developmen
 
 | Property | Value |
 | :--- | :--- |
+| **Application Name** | **UtilityForge** |
+| **Tagline** | *Forge better JavaScript workflows.* |
 | **Live Demo Website** | [https://devutils-demo-nu.vercel.app](https://devutils-demo-nu.vercel.app) |
-| **Package Name** | [`@aradhya2072007/devutils-npm`](https://www.npmjs.com/package/@aradhya2072007/devutils-npm) |
-| **Version** | `1.0.0` |
+| **Engine / Library** | **DevUtils** |
+| **NPM Package Name** | [`@aradhya2072007/devutils-npm`](https://www.npmjs.com/package/@aradhya2072007/devutils-npm) |
+| **Package Version** | `1.0.0` |
 | **Package Repository** | [github.com/aradhya2072007/npm-package-asd-project](https://github.com/aradhya2072007/npm-package-asd-project) |
 | **Demo Repository** | [github.com/aradhya2072007/devutils-demo](https://github.com/aradhya2072007/devutils-demo) |
 | **Installation** | `npm install @aradhya2072007/devutils-npm` |
@@ -36,7 +44,7 @@ Built as the second submission repository for the **Advanced Software Developmen
 
 ---
 
-## 🛠 Demonstrated Utilities (31 Functions)
+## 🛠 Demonstrated Utilities (31 Functions Across 6 Categories)
 
 ### 1. String Utilities (6)
 - `capitalize(str, options?)` — Capitalizes initial letter with optional casing preservation.
@@ -83,6 +91,41 @@ Built as the second submission repository for the **Advanced Software Developmen
 
 ---
 
+## 💻 Technology Stack
+
+- **Framework**: [React 19](https://react.dev/) + [Vite 8](https://vitejs.dev/)
+- **Core Library**: [`@aradhya2072007/devutils-npm`](https://www.npmjs.com/package/@aradhya2072007/devutils-npm)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Styling**: Pure CSS3 Design System (zero CSS framework overhead)
+- **Deployment**: [Vercel](https://vercel.com/) (Hobby Tier)
+
+---
+
+## 📁 Project Structure
+
+```
+devutils-demo/
+├── index.html                   # Entry HTML with UtilityForge branding & SEO metadata
+├── package.json                 # Project configuration & NPM dependencies
+├── package-lock.json            # Deterministic dependency lockfile
+├── vite.config.js               # Vite configuration with React plugin
+├── src/
+│   ├── main.jsx                 # Application entry point
+│   ├── App.jsx                  # Main application container & category filter logic
+│   ├── index.css                # UtilityForge design system, variables & responsive breakpoints
+│   ├── components/
+│   │   ├── Header.jsx           # Top navbar with UtilityForge branding & search bar
+│   │   ├── Hero.jsx             # Hero banner with install command & package stats
+│   │   ├── Sidebar.jsx          # Left sidebar with category filters & counts
+│   │   ├── UtilityCard.jsx      # Interactive card component with input controls & run action
+│   │   └── Toast.jsx            # Toast notification component
+│   └── data/
+│       └── utilityDefinitions.js # Declarative definitions for all 31 package utilities
+└── README.md                    # Project documentation
+```
+
+---
+
 ## 🚀 Local Development Setup
 
 Clone the repository:
@@ -110,25 +153,6 @@ Preview production build:
 ```bash
 npm run preview
 ```
-
----
-
-## 🌐 Deployment (Vercel / Netlify)
-
-This repository is ready for one-click deployment:
-
-### Deploying to Vercel
-1. Import repository `aradhya2072007/devutils-demo` on [Vercel](https://vercel.com).
-2. Framework preset: **Vite**.
-3. Build command: `npm run build`.
-4. Output directory: `dist`.
-5. Click **Deploy**.
-
-### Deploying to Netlify
-1. Connect repository `aradhya2072007/devutils-demo` on [Netlify](https://netlify.com).
-2. Build command: `npm run build`.
-3. Publish directory: `dist`.
-4. Click **Deploy site**.
 
 ---
 

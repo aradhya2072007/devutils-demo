@@ -6,8 +6,8 @@ import {
   ShieldCheck,
   Activity,
   Layers,
-  Sparkles,
-  ArrowRight
+  Anvil,
+  Sparkles
 } from 'lucide-react';
 
 export default function Hero({ onSelectCategory, onShowToast }) {
@@ -28,30 +28,31 @@ export default function Hero({ onSelectCategory, onShowToast }) {
   };
 
   return (
-    <section className="hero-banner">
+    <section className="hero-banner" aria-labelledby="hero-title">
       <div className="hero-content">
         <div className="hero-badge">
-          <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
-          <span>Advanced Software Development — Live Demo Application</span>
+          <Anvil className="w-3.5 h-3.5 text-indigo-400" />
+          <span>UtilityForge Workspace • Powered by DevUtils</span>
         </div>
 
-        <h1 className="hero-title">
-          Explore the <span className="gradient-text">DevUtils</span> JavaScript Toolkit
+        <h1 id="hero-title" className="hero-title">
+          Forge Better <span className="gradient-text">JavaScript</span> Workflows
         </h1>
 
         <p className="hero-description">
-          A high-performance, zero-dependency utility library for modern JavaScript developers.
-          Interactive playground executing live from the published NPM package with 100% pure functions.
+          A modern interactive workspace for exploring and executing 31 reusable JavaScript utility functions.
+          Powered by the high-performance, zero-dependency <code className="inline-pkg-code">@aradhya2072007/devutils-npm</code> toolkit.
         </p>
 
         {/* Install Command Terminal Box */}
         <div className="install-box">
-          <div className="install-prefix">$</div>
+          <div className="install-prefix" aria-hidden="true">$</div>
           <code className="install-command">{installCmd}</code>
           <button
             onClick={handleCopyInstall}
             className="btn-copy-install"
             title="Copy install command"
+            aria-label="Copy npm install command to clipboard"
           >
             {copied ? (
               <>
@@ -75,7 +76,7 @@ export default function Hero({ onSelectCategory, onShowToast }) {
             </div>
             <div className="stat-info">
               <span className="stat-value">v1.0.0</span>
-              <span className="stat-label">Published on NPM</span>
+              <span className="stat-label">Powered by DevUtils</span>
             </div>
           </div>
 

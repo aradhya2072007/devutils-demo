@@ -7,7 +7,7 @@ import {
   Boxes,
   Binary,
   Calendar,
-  Layers,
+  Anvil,
   Sparkles
 } from 'lucide-react';
 import { CATEGORIES } from '../data/utilityDefinitions';
@@ -24,11 +24,11 @@ const ICON_MAP = {
 
 export default function Sidebar({ activeCategory, onSelectCategory, countsByCategory }) {
   return (
-    <aside className="dashboard-sidebar">
+    <aside className="dashboard-sidebar" aria-label="Utility categories navigation">
       <div className="sidebar-section">
         <div className="sidebar-heading">
-          <Layers className="w-3.5 h-3.5 text-indigo-400" />
-          <span>Utility Categories</span>
+          <Anvil className="w-3.5 h-3.5 text-indigo-400" />
+          <span>UtilityForge Categories</span>
         </div>
 
         <nav className="sidebar-nav">
@@ -43,6 +43,7 @@ export default function Sidebar({ activeCategory, onSelectCategory, countsByCate
                 onClick={() => onSelectCategory(cat.id)}
                 className={`sidebar-nav-item ${isActive ? 'active' : ''}`}
                 data-category={cat.id}
+                aria-pressed={isActive}
               >
                 <div className="nav-item-left">
                   <Icon className={`w-4 h-4 nav-item-icon ${cat.id}`} />
@@ -60,10 +61,10 @@ export default function Sidebar({ activeCategory, onSelectCategory, countsByCate
       <div className="sidebar-footer-card">
         <div className="footer-card-header">
           <Sparkles className="w-4 h-4 text-indigo-400" />
-          <span className="footer-card-title">Live NPM Package</span>
+          <span className="footer-card-title">Powered by DevUtils</span>
         </div>
         <p className="footer-card-desc">
-          Installed from registry:
+          Published NPM toolkit:
         </p>
         <code className="footer-card-code">
           @aradhya2072007/devutils-npm
